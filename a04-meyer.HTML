@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--	A04-Meyer.html		Textbook Chapter 8/11
+	09/19/2023 CM Original Program
+	-->
+	<html lang="en">
+
+	<head>
+		<title>	Assignment 4 Chapter 8/11	- Christopher Meyer </title>
+		<meta charset="utf-8">
+	    <style>
+				
+		h1	  { color: lightblue;
+				font-size: 30px; font-weight: bold;
+			   }
+		h2	  { color: darkblue;
+				font-size: 20px;
+			   }
+		</style>
+	</head>
+	
+	<body style="background-color:grey;">
+	
+	  <header>
+		  <h1> Chapter #8/#11 </h1>
+	  </header>
+	
+	  <header>
+		  <h2> The Ques: </h2>
+	  </header>
+	  
+	  <ol>
+		
+		<li> <p id="q1">  What are the five key issues we need to focus on when gathering data? Provide an explanatory sentence for each.</p> </li>
+		<li> <p id="q2">  What are the six data techniques (in Section 8.7) - would you use them for your project app?.</p> </li>
+		<li> <p id="q3">  What is the format (syntax) of a user story? </p> </li>
+		<li> <p id="q4">  What are the five types of requirements, and list at least one from each type. </p> </li>
+		<li> <p id="q5">  What are the seven product dimensions? </p> </li>
+		<li> <p id="q6">  Compare and constrast persona and scenario. </p> </li>
+		
+	  </ol>
+	  
+	  <header>
+		  <h2> The Ans: </h2>
+	  </header>
+	  
+		 <button onclick="updateQues1()"> Answer Q1 </button>
+		 <button onclick="updateQues2()"> Answer Q2 </button>
+		 <button onclick="updateQues3()"> Answer Q3 </button>
+		 <button onclick="updateQues4()"> Answer Q4 </button>
+		 <button onclick="updateQues5()"> Answer Q5 </button>
+		 <button onclick="updateQues6()"> Answer Q6 </button>
+	
+	  <footer>
+	      <hr>
+		  <p style="text-align:center;">
+		  <small>	(C) C Meyer - Sept. 19th, 2023	</small>
+		  <hr>
+	  </footer>
+	  
+	  <script>	
+		   function updateQues1() {
+			  document.getElementById("q1").innerHTML = "Setting Goals: Before starting to gather evidence it is important to set objectives for the study as it can influence many aspects of the data gathering process. Identifying Participants: A small or large group of users defined by your gathering goals from which you'll gain your data from. Relationship with Participants: Keeping a clear and professional relationship between the study group and those doing the research in order to clarify the nature of the study. Triangulation: The investigation of a phenomenon from two different perspectives. Pilot Studies: A smaller trial run of the main study in order to determine that a proposed method is viable before commencing the real study.";
+			}
+		
+			function updateQues2() {
+			   document.getElementById("q2").innerHTML = "The six data techniques include interviews, focus groups, questionnaires, direct observation in the field, direct observation in a closed environment, and indirect observation. These techniques I can see definietly taking advantage of for our app.";
+			}
+			function updateQues3() {
+			   document.getElementById("q3").innerHTML = "The user story format is often expressed in a sentence, structured as follows: As a [persona], I [want to], [so that].";
+			}
+			function updateQues4() {
+			    document.getElementById("q4").innerHTML = "The five types of requirements are functional, data, environment, user, usability, and user experience.";
+			}
+			function updateQues5() {
+			    document.getElementById("q5").innerHTML = "The seven product dimensions are user, interface, action, data, control, environment, and quality attribute.";
+			}
+			function updateQues6() {
+			    document.getElementById("q6").innerHTML = "Personas focus on creating user archetypes to represent different user segments also including detailed demographic and psychographic information about the users, while scenarios focus on describing specific user interactions and experiences within a given context and providing narrative descriptions of user actions and emotions.";
+			}
+	  </script>  
+	  
+	</body>
+	
+	</html>

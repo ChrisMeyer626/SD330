@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--	A05-Meyer.html		Textbook Chapter 4/5
+	09/27/2023 CM Original Program
+	-->
+	<html lang="en">
+
+	<head>
+		<title>	Assignment 5 Chapter 4/5	- Christopher Meyer </title>
+		<meta charset="utf-8">
+	    <style>
+				
+		h1	  { color: black;
+				font-size: 30px; font-weight: bold;
+			   }
+		h2	  { color: black;
+				font-size: 20px;
+			   }
+		</style>
+	</head>
+	
+	<body style="background-color:grey;">
+	
+	  <header>
+		  <h1> Chapter #4/#5 - </h1>
+	  </header>
+	
+	  <header>
+		  <h2> Six Processes of Cognition: </h2>
+	  </header>
+	  
+	  <div class="myDiv" style="background-color: red; color: white;">
+	  <header>
+		  <h2 style="color: white;"> Attention- </h2>
+	  </header>
+	  It is central to life and enables us to concentrate on what is prevelent to us and warrants our effort.
+	  <ul>
+		
+		<li> <p>Consider context</p> </li>
+		<li> <p>Use techniques to achieve this when designing visual interfaces</p> </li>
+		<li> <p>Avoid cluttering visual interfaces with too much information</p> </li>
+		<li> <p>Consider designing different ways of supporting effective switching and returning to a particular interface</p> </li>
+		
+	  </ul>
+	  </div>
+	  
+	  <div class="myDiv" style="background-color: pink; color: white;">
+	  <header>
+		  <h2 style="color: white;"> Perception- </h2>
+	  </header>
+	  Refers to how information is acquired from the environment via the five sense organs(vision, hearing, taste, smell, and touch)
+	  <ul>
+		
+		<li> <p>Design icons and other graphical representations so that users can readily distinguish between them</p> </li>
+		<li> <p>Obvious seperators and white space are effective visual methods for grouping information that make it easier to perceive and locate items</p> </li>
+		<li> <p>Design audio to be readily distinguishable from one another so that users can perceive how they differ and remember what each one represents.</p> </li>
+		<li> <p>Research proper color contrast techniques when designing an interface</p> </li>
+		<li> <p>Haptic feedback should be used judiciously</p> </li>
+		
+	  </ul>
+	  </div>
+	  
+	  <div class="myDiv" style="background-color: orange; color: white;">
+	  <header>
+		  <h2 style="color: white;"> Memory- </h2>
+	  </header>
+	  Involves recalling various kinds of knowledge that allow people to act appropriately
+	  <ul>
+		
+		<li> <p>Reduce cognitive load by avoiding long and complicated procedures for carrying out tasks</p> </li>
+		<li> <p>Design interfaces that promote recognition rather than recall by using familiar interaction patterns</p> </li>
+		<li> <p>Provide users with a variety of ways of labeling digital information</p> </li>
+		
+	  </ul>
+	  </div>
+	  
+	  <div class="myDiv" style="background-color: lightblue; color: white;">
+	  <header>
+		  <h2 style="color: white;"> Learning- </h2>
+	  </header>
+	  Being closely connected to memeory,it involves the accumulation of skills and knowledge that would be impossible to achieve with memory
+	  <ul>
+		
+		<li> <p>Design interfaces that encourage exploration</p> </li>
+		<li> <p>Design interfaces that constrain and guide users to select appropriate actions when initially learning</p> </li>
+		
+	  </ul>
+	  </div>
+	  
+	  <div class="myDiv" style="background-color: lightgreen; color: white;">
+	  <header>
+		  <h2 style="color: white;"> Reading, Speaking, & Listening- </h2>
+	  </header>
+	  Three forms of language processing that have some similar and some different properties
+	  <ul>
+		
+		<li> <p>Keep the length of speech-based menus and instructions to a minimum</p> </li>
+		<li> <p>Accentuate the intonation of artifically generated speech voices, as they are harder to understand than human voices</p> </li>
+		<li> <p>Provide people with opportunities for making text large on a screen</p> </li>
+		
+	  </ul>
+	  </div>
+	  
+	  <div class="myDiv" style="background-color: purple; color: white;">
+	  <header>
+		  <h2 style="color: white;"> Problem-Solving, Reasoning, & Decision-Making </h2>
+	  </header>
+	  Processes involving reflective cognition and include thinking about what to do, what the available options are, and the consequences brought by said actions
+	  <ul>
+		
+		<li> <p>Provide information and help pages that are easy to access for people who want to understand more about how to carry out an activity more effectivly</p> </li>
+		<li> <p>Use simple and memorable functions to support rapid decision-making and planning</p> </li>
+		
+	  </ul>
+	  </div>
+	  
+		  <button id="updateBackground">Change to Black</button>
+	
+	  <footer>
+	      <hr>
+		  <p style="text-align:center;">
+		  <small>	(C) C Meyer - Sept. 27th, 2023	</small>
+		  <hr>
+	  </footer>
+	  
+	  <script>	
+		var divElements = document.querySelectorAll(".myDiv");
+		var buttonElement = document.getElementById("updateBackground");
+
+    
+		buttonElement.addEventListener("click", function() {
+      
+		  for (var i = 0; i < divElements.length; i++) {
+		    divElements[i].style.backgroundColor = "black";
+		  }
+		});
+	  </script>  
+	  
+	</body>
+	
+	</html>
