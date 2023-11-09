@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--	index.html		E10 Design and Create a GitHub Repository File List
+	11/08/2023 CM Original Program
+	-->
+	<html lang="en">
+
+	<head>
+	
+		<title>GitHub Repository File List</title>
+		<meta charset="utf-8">
+		
+		<style>
+		
+		body {
+            background-image: url(https://img.freepik.com/premium-photo/background-writing-text-composition-autumn-style_127093-389.jpg); 
+            background-size: 80%;
+			background-repeat: no-repeat;
+        }
+		
+		img {
+			border-width: 2px;
+			border-style: dashed;
+			border-color: #0099cc;;
+		}
+		
+		</style>
+		
+	</head>
+	<body style="background-color:tan; color: #0099cc;">
+	
+		<header>
+		  <h1 style="text-align: center;"> My GitHub Repository File List: </h1>
+		</header>
+		
+		<p>Hello, this is Christopher Meyer's GitHub Repository List, with some of my own added flair and a profile picture included in the document.</p>
+		
+		<img src="C:\Users\nybra\iCloudPhotos\Photos\Snapchat-2093642808_Original.JPG" alt="Christopher's Profile" style="width: 200px; height: 150px;">
+		
+		<p style="text-align: center;">Below are the files on my GitHub SD330 repository:</p>
+		
+		<div style="text-align: center;" id="files">
+		<br> <a href="C:\SD2\HTML\Chris' Design Principles.html">Chris' Design Principles File</a> </br>
+		<br> <a href="C:\SD2\HTML\a02-meyer.HTML">A02-meyer File</a> </br>
+		<br> <a href="C:\SD2\HTML\a03-meyer.HTML">A03-meyer File</a> </br>
+		<br> <a href="C:\SD2\HTML\a04-meyer.HTML">A04-meyer File</a> </br>
+		<br> <a href="C:\SD2\HTML\a05-meyer.HTML">A05-meyer File</a> </br>
+		<br> <a href="C:\SD2\HTML\a06-meyer.HTML">A06-meyer File</a> </br>
+		<br> <a href="C:\SD2\HTML\a08-meyer.HTML">A08-meyer File</a> </br>
+		<br> <a href="C:\SD2\HTML\fridge.html">Fridge File</a> </br>
+		<br> <a href="C:\SD2\HTML\index.html">Index File</a></br>
+		</div>
+	
+		<script>
+		
+		function githubFilelist(){
+						
+				var htmlString = "";
+			
+			  // this creates JS object 'data' with a list of files   	 
+				(async () => {
+					const response = await fetch("https://api.github.com/repos/ChrisMeyer626/SD330/contents/");
+					const data = await response.json();
+				
+			  // loop through the list of files, set "file" to each file name
+					for (let file of data) {
+						
+						fname = file.name;           
+						fpath = "https://ChrisMeyer626.github.io/SD330/" + fname;  
+						
+						htmlString += "<p>" + fname ;
+						htmlString += "<p>" + fpath ;
+					}
+				
+				document.getElementById('files').innerHTML = htmlString;
+				})()
+			
+			}
+			
+		</script>
+	
+		<footer style="text-align: center;">
+			<hr>
+				(C) C. Meyer, Nov. 8th 2023
+		</footer>
+	
+	</body>
+	</html>
