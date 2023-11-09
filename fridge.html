@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--	fridge.html		E09 - Fridge App Version #2
+	11/08/2023 CM Original Program
+	-->
+<html lang="en">
+
+<head>
+    <style>
+	
+	#refrigerator {
+		 width: 500px; 
+         margin: 20px auto; 
+	}
+	
+	 #inside-fridge-image {
+        width: 500%; 
+        height: auto; 
+    }
+	
+	#header {
+		position: absolute;
+		top: 10px; 
+		right: 10px; 
+		border: 3px solid black;
+	}
+	
+	#display {
+		 position: absolute;
+		top: 150px; 
+		right: 10px; 
+	}
+	
+	#weather-image {
+        width: 350px;
+        height: auto; 
+    }
+
+	
+	
+	</style>
+</head>
+<body>
+
+	
+    <div id="refrigerator">
+        <div id="header">
+            <button id="power-button">OFF</button>
+			<button id="time-format-button">Switch Format</button>
+            <div id="clock">00:00:55</div>
+			<button id="startTimerButton">Start Timer</button>
+			<div id="timer-display"></div>
+			<audio id="alarm-sound" src="C:\Users\nybra\Downloads\FM9B3TC-alarm.mp3"></audio>
+			<button id="fridgeToggle">Toggle Fridge</button>
+        </div>
+		
+		<div id="refrigerator">
+			<img id="fridgeImage" src="https://images.thdstatic.com/productImages/3b22984c-1081-4f49-bab1-023843d4d769/svn/fingerprint-resistant-black-stainless-steel-samsung-french-door-refrigerators-rf29a9771sg-64_600.jpg">
+		</div>
+		
+        <div id="display">
+            <div id="temperature">
+                <h3>Temperature</h3>
+                <p id="temp-display">37.97</p>
+				<button id="toggle-unit-button">Toggle Unit</button>
+				<button id="increase-temperature">Increase</button>
+				<button id="decrease-temperature">Decrease</button>
+            </div>
+			 <div id="weather">
+				<h3>Weather Forecast</h3>
+				<button id="get-weather-button">Get Weather</button>
+				<img id="weather-image" src="" alt="Weather Forecast" style="display: none;">
+			</div><br>
+            <div id="add-apps">
+                <h3>Additional Apps</h3>
+                <p id="music-display"> <img width="200px" height="200px" src="https://techcrunch.com/wp-content/uploads/2021/03/After-downloaded-music-Playlist-2.png?w=680"> </p>
+            </div>
+            <div id="tv">
+                <p id="tv-display"> <img width="200px" height="100px" src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*NhaoXTUUQj0Oenrm3XwG3A.png"> </p>
+            </div>
+            <div id="browser">
+                <p id="browser-display"> <img width="200px" height="100px" src="https://nira.com/wp-content/uploads/2020/01/Default_Chrome_Homepage-768x538.png"> </p>
+            </div>
+			<div id="shopping-list">
+			<h3>Shopping List:</h3>
+			<ul id="food-items">
+				<li>Item 1: Milk</li>
+				<li>Item 2: Bread</li>
+				<li>Item 3: Eggs</li>
+				<li>Item 4: Apples</li>
+				<li>Item 5: Rice</li>
+			</ul>
+			<input type="text" id="add-food-item" placeholder="Add a food item">
+			<button id="add-button">Add</button>
+			</div>
+        </div>
+    </div>
+	
+    <script> 
+	
+        const powerButton = document.getElementById('power-button');
+        const clockDisplay = document.getElementById('clock');
+        const temperatureDisplay = document.getElementById('temp-display');
+		const toggleUnitButton = document.getElementById('toggle-unit-button');
+		const increaseTemperatureButton = document.getElementById('increase-temperature');
+		const decreaseTemperatureButton = document.getElementById('decrease-temperature');
+        const addappsDisplay = document.getElementById('add-apps');
+        const tvDisplay = document.getElementById('tv-display');
+        const browserDisplay = document.getElementById('browser-display');
+        const timeFormatButton = document.getElementById('time-format-button');
+		const getWeatherButton = document.getElementById('get-weather-button');
+		const weatherImage = document.getElementById('weather-image');
+		const startTimerButton = document.getElementById('startTimerButton'); 
+		const alarmSound = document.getElementById('alarm-sound');
+		const foodList = document.getElementById('food-items');
+		const addFoodInput = document.getElementById('add-food-item');
+		const addButton = document.getElementById('add-button');
+		const fridgeToggle = document.getElementById('fridgeToggle');
+        const fridgeImage = document.getElementById('fridgeImage');
+		const shoppinglistDisplay = document.getElementById('shopping-list');
+
+
+		
+		let temperatureInCelsius = 37.97; 
+		let isFahrenheit = false; 
+
+        let isPowerOn = true;
+        let is12HourFormat = true;
+
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+
+            if (is12HourFormat) {
+                hours = (hours % 12) || 12;
+            }
+
+            clockDisplay.textContent = `${hours}:${minutes}:${seconds} ${is12HourFormat ? 'AM' : 'PM'}`;
+        }
+
+        function toggleTimeFormat() {
+            is12HourFormat = !is12HourFormat;
+            updateClock();
+        }
+		
+			function updateTemperatureDisplay() {
+		if (isFahrenheit) {
+			temperatureDisplay.textContent = `${(temperatureInCelsius * 9/5 + 32).toFixed(2)} °F`;
+		} else {
+			temperatureDisplay.textContent = `${temperatureInCelsius.toFixed(2)} °C`;
+		}
+	}
+
+        function updateTemperature() {
+            let randomNum = Math.random() * 3 + 37;
+            temperatureDisplay.textContent = Math.round(randomNum * 100) / 100;
+				
+				if (isFahrenheit) {
+			temperatureDisplay.textContent = `${(temperatureInCelsius * 9/5 + 32).toFixed(2)} °F`;
+		} else {
+			temperatureDisplay.textContent = `${temperatureInCelsius.toFixed(2)} °C`;
+		}
+	}
+
+		function toggleTemperatureUnit() {
+			isFahrenheit = !isFahrenheit;
+			updateTemperatureDisplay();
+		}
+
+		function increaseTemperature() {
+			temperatureInCelsius += 1;  
+			updateTemperatureDisplay();
+		}
+
+		function decreaseTemperature() {
+			temperatureInCelsius -= 1; 
+			updateTemperatureDisplay();
+		}
+
+        function togglePower() {
+            isPowerOn = !isPowerOn;
+            powerButton.textContent = isPowerOn ? 'ON' : 'OFF';
+            const display = isPowerOn ? 'visible' : 'hidden';
+            clockDisplay.style.visibility = display;
+            temperatureDisplay.style.visibility = display;
+            addappsDisplay.style.visibility = display;
+			shoppinglistDisplay.style.visibility = display;
+            tvDisplay.style.visibility = display;
+            browserDisplay.style.visibility = display;
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+        setInterval(updateTemperature, 15000);
+        updateTemperature();
+
+        powerButton.addEventListener('click', togglePower);
+		
+        timeFormatButton.addEventListener('click', toggleTimeFormat);
+		
+		toggleUnitButton.addEventListener('click', toggleTemperatureUnit);
+		increaseTemperatureButton.addEventListener('click', increaseTemperature);
+		decreaseTemperatureButton.addEventListener('click', decreaseTemperature);
+		updateTemperatureDisplay();
+		
+		getWeatherButton.addEventListener('click', () => {
+		const weatherImageUrl = 'https://www.ejsweather.com/newton/forecast.jpg';
+		weatherImage.src = weatherImageUrl;
+		weatherImage.style.display = 'block';
+		});
+		
+		const timerDisplay = document.getElementById('timer-display');
+
+		let timerId;
+		let remainingTime = 60000; 
+
+		function updateTimerDisplay() {
+		  const minutes = Math.floor(remainingTime / 60000);
+		  const seconds = Math.floor((remainingTime % 60000) / 1000);
+		  timerDisplay.textContent = `Time remaining: ${minutes}:${seconds}`;
+		}
+
+		startTimerButton.addEventListener('click', () => {
+		  if (!timerId) {
+			timerId = setInterval(() => {
+			  remainingTime -= 1000;
+			  if (remainingTime <= 0) {
+				clearInterval(timerId);
+				alarmSound.play(); 
+				alert('Timer went off!');
+				timerId = null;
+				timerDisplay.textContent = 'Timer expired';
+			  } else {
+				updateTimerDisplay();
+			  }
+			}, 1000);
+		  } else {
+		  }
+		});
+		
+		addButton.addEventListener('click', () => {
+		const newItemText = addFoodInput.value.trim();
+
+		if (newItemText !== '') {
+			const newItem = document.createElement('li');
+			newItem.textContent = `Item ${foodList.childElementCount + 1}: ${newItemText}`;
+			foodList.appendChild(newItem);
+			addFoodInput.value = ''; 
+		}
+	});
+	
+		let isInsideFridge = false;
+        const insideFridgeImageSrc = 'https://ak1.ostkcdn.com/images/products/is/images/direct/3d7eeada7d65884d8f9ce14dcd60bfef0c34433d/29-cu.-ft.-Smart-4-Door-Flex-refrigerator-with-Beverage-Center-and-Dual-Ice-Maker-in-Black-Stainless-Steel.jpg?imwidth=300'; 
+
+        fridgeToggle.addEventListener('click', () => {
+            if (isInsideFridge) {
+                fridgeImage.src = 'https://images.thdstatic.com/productImages/3b22984c-1081-4f49-bab1-023843d4d769/svn/fingerprint-resistant-black-stainless-steel-samsung-french-door-refrigerators-rf29a9771sg-64_600.jpg';
+                isInsideFridge = false;
+            } else {
+                fridgeImage.src = insideFridgeImageSrc;
+                isInsideFridge = true;
+            }
+        });
+	
+	</script>
+	
+
+</body>
+
+</html>
