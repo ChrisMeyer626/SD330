@@ -1,0 +1,204 @@
+{
+    "courses": [
+        {
+            "course_name": "Software Systems + Analysis",
+            "subject": "CMPT",
+            "course_number": "230L",
+            "course_section": 113,
+            "credits": 4,
+            "instructor" : "Marilyn J. Kienzie",
+
+            "books": [
+                {
+                    "title": "System Analysis, Design, and Development: Concepts, Principles, and Practices",
+                    "author": "Charles S. Wasson",
+                    "isbn": 9780471393337,
+                    "published_year": 2005,
+                    "publisher": "Wiley-Interscience"
+                },
+                {
+                    "title": "Systems Analysis and Design",
+                    "author": "Scott Tilley",
+                    "isbn": 9781305494602,
+                    "published_year": 2016,
+                    "publisher": "Cengage Learning"
+                }
+            ]
+        },
+        {
+            "course_name": "Data Communications",
+            "subject": "CMPT",
+            "course_number": "306N",
+            "course_section": 111,
+            "credits": 4,
+            "instructor" : "Andrew P. Tokash",
+
+            "books": [
+                {
+                    "title": "A Textbook of Data Communication and Networks",
+                    "author": "Dr. Sanjay Sharma",
+                    "isbn": 9789350146125,
+                    "published_year": 2016,
+                    "publisher": "S.K. Kataria & Sons"
+                },
+                {
+                    "title": "Data and Computer Communications",
+                    "author": "William Stallings ",
+                    "isbn": 9780133506488,
+                    "published_year": 2013,
+                    "publisher": "Pearson"
+                }
+            ]
+        },
+        {
+            "course_name": "Calculus I",
+            "subject": "MATH",
+            "course_number": "241L",
+            "course_section": 113,
+            "credits": 4,
+            "instructor" : "Scott D. Frank",
+
+            "books": [
+                {
+                    "title": "College Calculus",
+                    "author": "Michael E. Boardman and Roger B. Nelsen",
+                    "isbn": 9781939512062,
+                    "published_year": 2015,
+                    "publisher": "American Mathematical Society"
+                },
+                {
+                    "title": "Calculus I with Precalculus",
+                    "author": "Ron Larson",
+                    "isbn": 9780840068330,
+                    "published_year": 2011,
+                    "publisher": "Cengage Learning"
+                }
+            ]
+        },
+        {
+            "course_name": "Philosophical Perspectives",
+            "subject": "PHIL",
+            "course_number": "101L",
+            "course_section": 120,
+            "credits": 3,
+            "instructor" : "Giorgi Lebanidze",
+
+            "books": [
+                {
+                    "title": "Philosophical, Ideological, and Theoretical Perspectives on Education",
+                    "author": "Gerald L. Gutek",
+                    "isbn": 9780132852388,
+                    "published_year": 2013,
+                    "publisher": "Pearson"
+                },
+                {
+                    "title": "Introduction to World Philosophy: A Multicultural Reader",
+                    "author": "Daniel Bonevac",
+                    "isbn": 9780195152319,
+                    "published_year": 2009,
+                    "publisher": "Oxford University Press"
+                }
+            ]
+        },
+        {
+            "course_name": "Technology, Ethics, + Society",
+            "subject": "CMPT",
+            "course_number": "305L",
+            "course_section": 112,
+            "credits": 3,
+            "instructor" : "Christopher J. Algozzine",
+
+            "books": [
+                {
+                    "title": "Society, Ethics, and Technology",
+                    "author": "Morton Winston",
+                    "isbn": 9781133943556,
+                    "published_year": 2013,
+                    "publisher": "Cengage Learning"
+                },
+                {
+                    "title": "Ethics in an Age of Technology: Gifford Lectures",
+                    "author": "Ian G. Barbour",
+                    "isbn": 9780060609351,
+                    "published_year": 1992,
+                    "publisher": "HarperCollins"
+                }
+            ]
+        },
+        {
+            "course_name": "Internetworking",
+            "subject": "CMPT",
+            "course_number": "307N",
+            "course_section": 111,
+            "credits": 4,
+            "instructor" : "Robert M. Cannistra",
+
+            "books": [
+                {
+                    "title": "Internetworking with TCP/IP",
+                    "author": "Douglas Comer",
+                    "isbn": 9780136085300,
+                    "published_year": 2013,
+                    "publisher": "Pearson"
+                },
+                {
+                    "title": "Networking Essentials: A CompTIA Network+ N10-007 Textbook",
+                    "author": "Jeffrey Beasley",
+                    "isbn": 9780789758743,
+                    "published_year": 2018,
+                    "publisher": "Pearson IT Certification"
+                }
+            ]
+        },
+        {
+            "course_name": "Intro to Cybersecurity",
+            "subject": "CMPT",
+            "course_number": "416N",
+            "course_section": 112,
+            "credits": 4,
+            "instructor" : "Andrew P. Tokash",
+
+            "books": [
+                {
+                    "title": "Cybersecurity First Principles: A Reboot of Strategy and Tactics",
+                    "author": "Rick Howard",
+                    "isbn": 9781394173082,
+                    "published_year": 2023,
+                    "publisher": "Wiley"
+                },
+                {
+                    "title": "Cybersecurity Essentials",
+                    "author": "Charles J. Brooks",
+                    "isbn": 9781119362395,
+                    "published_year": 2018,
+                    "publisher": "Sybex"
+                }
+            ]
+        },
+        {
+            "course_name": "Intro Business & Management",
+            "subject": "BUS",
+            "course_number": "100N",
+            "course_section": 112,
+            "credits": 3,
+            "instructor" : "Rena A. Hil",
+
+            "books": [
+                {
+                    "title": "Foundations of Business",
+                    "author": "William M. Pride",
+                    "isbn": 9780357717943,
+                    "published_year": 2022,
+                    "publisher": "Cengage Learning"
+                },
+                {
+                    "title": "Management Fundamentals: Concepts, Applications, and Skill Development",
+                    "author": "Robert N. Lussier",
+                    "isbn": 9781544384191,
+                    "published_year": 2020,
+                    "publisher": "SAGE Publications, Inc"
+                }
+            ]
+        }
+    ]
+}
